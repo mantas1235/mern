@@ -1,8 +1,24 @@
-import React from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from "./assets/pages/Home"
+import About from './assets/pages/About';
+import Signin from './assets/pages/Signin';
+import SignUp from './assets/pages/SignUp';
+import Profile from './assets/pages/SignUp';
 
 function App() {
   return (
-    <div>App</div>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />}></Route>
+      <Route path='/about' element={<About />}></Route>
+      <Route path='/signin' element={<Signin />}></Route>
+      <Route path='/signup' element={<SignUp />}></Route>
+      <Route path='/profile' element={<Profile />}></Route>
+    </Routes>
+    
+    
+    </BrowserRouter>
+   
   )
 }
 
